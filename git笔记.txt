@@ -41,4 +41,8 @@
 	有没有联网都可以正常工作,而SVN在没有联网的时候是拒绝干活的!当有网络的时候,
 	再把本地提交推送一下就完成了同步,真是太方便了!
 	
+	git克隆命令:
+	$ git clone git@server-name:path/repo-name.git
+	
+	
 	
