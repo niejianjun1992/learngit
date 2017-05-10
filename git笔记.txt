@@ -1,6 +1,44 @@
-文件名;readme.txt
+	文件名;readme.txt
 
-添加: $ git add readme.txt
-提交: $ git commit -m "wrote a readme file"
-查看当前状态: $ git status
-查看修改: $ git diff readme.txt
+	添加: $ git add readme.txt
+	提交: $ git commit -m "wrote a readme file"
+	查看当前状态: $ git status
+	查看修改: $ git diff readme.txt	
+	显示日志: $ git log
+	版本回退: $ git reset  ---(公式:git reset --hard commit_id)
+	命令日志: $ git reflog
+
+	工作区(Working Directory): 就是在电脑里能看到的目录,比
+	如learngit文件夹
+	
+	版本库(Repository): 工作区有一个隐藏目录 ".git" , 这个
+	不算工作区, 而是Git的版本库.....Git的版本库里存了很多东
+	西,其中最重要的就是称为stage (或者叫index) 的暂存区, 还
+	有Git为我们自动创建的第一个分支master, 以及指向master的
+	一个指针叫HEAD.
+	
+	Git跟踪修改:
+	每次修改,如果不add到暂存区,那就不不会加入到commit中
+	
+	$git checkout -- readme.txt
+	让这个文件回到最近一次git commit或git add时的状态.
+	git checkout其实是用版本库里的版本替换工作区的版本,
+	无论工作区是修改还是删除,都可以"一键还原".
+	
+	$ git reset HEAD readme.txt可以把暂存区的修改撤销掉(unstage),
+	重新放回工作区
+	
+	命令git rm用于删除一个文件,如果一个文件已经被提交到版本库,那么
+	你永远不用担心误删,但是要小心,你只能恢复到最新版本,你会丢失你
+	最近一次提交后修改的内容.
+	
+	要关联一个远程库, 使用命令:
+	$ git remote add origin git@server-name:path/repo-name.git;
+	关联后,使用命令git push -u origin master第一次推送master分支的所有内容;
+	此后,每次本地提交后,只要有必要,就可以使用命令git push origin master推送最新修改;
+	
+	分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在,也就是
+	有没有联网都可以正常工作,而SVN在没有联网的时候是拒绝干活的!当有网络的时候,
+	再把本地提交推送一下就完成了同步,真是太方便了!
+	
+	
