@@ -1,0 +1,6 @@
+文件名;readme.txt
+
+添加: $ git add readme.txt
+提交: $ git commit -m "wrote a readme file"
+查看当前状态: $ git status
+查看修改: $ git diff readme.txt
